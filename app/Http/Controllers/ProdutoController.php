@@ -7,30 +7,6 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    // public function index()
-    // {
-    //     $produtos = [
-    //         (object)['produto' => 'Vinho','ml'=>'600ml'],
-    //         (object)['produto' => 'Wisky','ml'=>'500ml'],
-    //         (object)['produto' => 'Champagne','ml'=>'700ml']
-    //     ];
-
-        
-    //     $produto1 = new Produto();
-    //     dd($produto1->listar());
-    //     return view('Produto.index', compact('produtos'));
-    // }
-
-    // public function criar(Request $requisicao)
-    // {
-    //     dd($requisicao->all());
-    //     return 'Criado';
-    // }
-
-    // public function editar()
-    // {
-    //     return 'Editado';
-    // }
 
     public function produto(Request $requisicao)
     {

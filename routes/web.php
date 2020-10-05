@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 // Route::get('/Produto/{id?}','ProdutoController@produto');
@@ -41,8 +41,9 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('/Produto/editar/{id}','ProdutoController@editar')->name('editar');
     Route::put('/Produto/atualizar/{id}','ProdutoController@atualizar')->name('atualizar');
     Route::delete('/Produto/deletar/{id}','ProdutoController@deletar')->name('deletar');
+    Route::get('/home', 'HomeController@index')->name('home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

@@ -19,3 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/listar','Api\ProdutoController@listar');
+Route::post('/salvar','Api\ProdutoController@salvar');
+Route::get('/buscar/{id}','Api\ProdutoController@buscar');
+Route::put('/atualizar{id}','Api\ProdutoController@atualizar');
+Route::delete('/deletar{id}','Api\ProdutoController@deletar');
+

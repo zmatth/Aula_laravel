@@ -2,21 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-
+use App\Http\Controllers\BaseController;
 use App\Produto;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProdutoController extends Controller
+class ProdutoController extends BaseController
 {
-    public function listar()
-    {
-        $dados = Produto::all();
-        foreach($dados as $dado)
-        {
-            $dado['imagem']= url($dado['imagem']);
-        }
 
-        return response()->json($dados,200);
+    public function __construct()
+    {
+        $this->classe = Produto::class;
     }
 }
